@@ -25,8 +25,10 @@ if (TRAVEL_PARTNER_URL.trim()) {
 } else {
   partnerLink.addEventListener("click", (event) => {
     event.preventDefault();
-    partnerNote.textContent = "Add your partner's website URL in script.js to activate this link.";
-  });
+const formStatus = document.getElementById("formStatus");
+
+if (formStatus) {
+  formStatus.textContent = "กรุณาตรวจสอบข้อมูลก่อนส่ง";
 }
 
 document.getElementById("enquiryForm").addEventListener("submit", (event) => {
